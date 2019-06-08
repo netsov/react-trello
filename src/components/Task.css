@@ -1,0 +1,7 @@
+.task {
+    background-color: aliceblue;
+    padding: 0.5em;
+    display: flex;
+    margin: 0.5em 0;
+    justify-content: space-between;
+}

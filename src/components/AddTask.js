@@ -1,8 +1,11 @@
 import React from 'react';
 
-import './AddCard.css';
+import { connect } from 'react-redux';
 
-export class AddCard extends React.Component {
+import './AddTask.css';
+import { addTask } from '../redux/actions';
+
+class AddCard extends React.Component {
   state = {
     input: ''
   };
@@ -11,6 +14,7 @@ export class AddCard extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    this.props.addTask(this.state.input);
     this.setState({ input: '' });
   };
 
@@ -23,8 +27,12 @@ export class AddCard extends React.Component {
           onChange={this.handleInput}
           placeholder="Enter task"
         />
-        <button type="submit">Add</button>
+        <button type="submit" disabled={!this.state.input}>
+          Add
+        </button>
       </form>
     );
   }
 }
+
+export default connect(null, { addTask })(AddCard);

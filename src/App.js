@@ -2,8 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import './App.css';
-import { Board } from './components/Board';
-import { AddCard } from './components/AddCard';
+import Board from './components/Board';
+import AddCard from './components/AddTask';
 import { store } from './redux/store';
 import * as boards from './boards';
 

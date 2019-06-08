@@ -1,4 +1,4 @@
-import {ADD_TASK, MOVE_TASK} from "./actionTypes";
+import { ADD_TASK, MOVE_TASK } from './actionTypes';
 
 export function addTask(title) {
   return {
@@ -6,15 +6,14 @@ export function addTask(title) {
     payload: {
       title
     }
-  }
+  };
 }
 
-export function moveTask(taskId, board) {
+export function moveTask(taskId) {
   return {
     type: MOVE_TASK,
     payload: {
-      taskId,
-      board
+      taskId
     }
-  }
+  };
 }
