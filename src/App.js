@@ -1,19 +1,23 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
 import './App.css';
 import { Board } from './components/Board';
 import { AddCard } from './components/AddCard';
-
-const boards = [{ name: 'Todo' }, { name: 'Doing' }, { name: 'Done' }];
+import { store } from './redux/store';
+import * as boards from './boards';
 
 function App() {
   return (
-    <main>
-      {boards.map(board => (
-        <Board key={board.name} board={board}>
-          {board.name === 'Todo' && <AddCard />}
-        </Board>
-      ))}
-    </main>
+    <Provider store={store}>
+      <main>
+        {boards.ALL.map(board => (
+          <Board key={board} board={board}>
+            {board === boards.TODO && <AddCard />}
+          </Board>
+        ))}
+      </main>
+    </Provider>
   );
 }
 
