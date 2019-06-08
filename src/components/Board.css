@@ -1,12 +1,18 @@
 .board {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  height: 100%;
-  background-color: ghostwhite;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    background-color: ghostwhite;
+    margin: 0 0.4em;
 }
 
 .board h4 {
-  background-color: aliceblue;
-  text-align: center;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.board form {
+    display: flex;
+    flex-direction: column;
 }
