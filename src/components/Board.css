@@ -1,0 +1,12 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  background-color: ghostwhite;
+}
+
+.board h4 {
+  background-color: aliceblue;
+  text-align: center;
+}
